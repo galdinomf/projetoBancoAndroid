@@ -30,6 +30,10 @@ public class ContasActivity extends AppCompatActivity {
         adicionarConta.setOnClickListener(
                 v -> startActivity(new Intent(this, AdicionarContaActivity.class))
         );
+
+        viewModel.contas.observe(this, contas -> {
+            adapter.submitList(contas);
+        });
     }
     //TODO Neste arquivo ainda falta implementar o código que atualiza a lista de contas automaticamente na tela
 }
