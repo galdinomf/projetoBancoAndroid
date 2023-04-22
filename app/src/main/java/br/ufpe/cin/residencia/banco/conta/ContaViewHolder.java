@@ -38,7 +38,7 @@ public class ContaViewHolder  extends RecyclerView.ViewHolder {
                 v -> {
                     Context c = this.itemView.getContext();
                     Intent i = new Intent(c, EditarContaActivity.class);
-                    //TODO Está especificando a Activity mas não está passando o número da conta pelo Intent
+                    i.putExtra("numeroDaConta", numeroConta);
                     c.startActivity(i);
                 }
         );
