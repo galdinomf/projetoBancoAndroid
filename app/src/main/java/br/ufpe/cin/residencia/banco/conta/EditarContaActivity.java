@@ -69,7 +69,7 @@ public class EditarContaActivity extends AppCompatActivity {
         );
 
         btnRemover.setOnClickListener(v -> {
-            //TODO implementar remoção da conta
+            viewModel.remover(viewModel.contaAtual.getValue());
         });
     }
 }
