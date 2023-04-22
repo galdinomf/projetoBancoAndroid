@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
@@ -33,13 +34,27 @@ public class AdicionarContaActivity extends AppCompatActivity {
 
         btnAtualizar.setOnClickListener(
                 v -> {
-                    String nomeCliente = campoNome.getText().toString();
-                    String cpfCliente = campoCPF.getText().toString();
                     String numeroConta = campoNumero.getText().toString();
+                    if (numeroConta.length() != 3) {
+                        Toast.makeText(this, "O número da conta deve ter 3 dígitos", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    String nomeCliente = campoNome.getText().toString();
+                    if (nomeCliente.length() < 5) {
+                        Toast.makeText(this, "O nome deve ter pelo menos 5 caracteres", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    String cpfCliente = campoCPF.getText().toString();
+                    if (cpfCliente.length() != 11) {
+                        Toast.makeText(this, "O cpf deve ter 11 números", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
                     String saldoConta = campoSaldo.getText().toString();
-                    //TODO: Incluir validações aqui, antes de criar um objeto Conta (por exemplo, verificar que digitou um nome com pelo menos 5 caracteres, que o campo de saldo tem de fato um número, assim por diante). Se todas as validações passarem, aí sim cria a Conta conforme linha abaixo.
+                    if (saldoConta.length() == 0) {
+                        Toast.makeText(this, "Campo saldo não pode ficar vazio.", Toast.LENGTH_LONG).show();
+                        return;
+                    }
                     Conta c = new Conta(numeroConta, Double.valueOf(saldoConta), nomeCliente, cpfCliente);
-                    //TODO: chamar o método que vai salvar a conta no Banco de Dados
                     viewModel.inserir(c);
                 }
         );

@@ -35,5 +35,4 @@ public class ContasActivity extends AppCompatActivity {
             adapter.submitList(contas);
         });
     }
-    //TODO Neste arquivo ainda falta implementar o código que atualiza a lista de contas automaticamente na tela
 }
