@@ -37,18 +37,15 @@ public class ContaRepository {
     @WorkerThread
     public List<Conta> buscarPeloNome(String nomeCliente) {
         return dao.buscarPeloNome(nomeCliente);
-        //return null;
     }
 
     @WorkerThread
     public List<Conta> buscarPeloCPF(String cpfCliente) {
         return dao.buscarPeloCPF(cpfCliente);
-        //return null;
     }
 
     @WorkerThread
     public Conta buscarPeloNumero(String numeroConta) {
         return dao.buscarPeloNumero(numeroConta);
-        //return null;
     }
 }
