@@ -37,7 +37,10 @@ public class ContaViewModel extends AndroidViewModel {
         new Thread(() -> repository.remover(c)).start();
     }
 
-    void buscarPeloNumero(String numeroConta)  { //ISTO ESTÁ ERRADO!
-       // new Thread(() -> repository.buscarPeloNumero(numeroConta)).start();
+    void buscarPeloNumero(String numeroConta)  {
+        new Thread(() -> {
+            Conta conta = repository.buscarPeloNumero(numeroConta);
+            _contaAtual.postValue(conta);
+        }).start();
     }
 }
