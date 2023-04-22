@@ -30,14 +30,14 @@ public class ContaViewModel extends AndroidViewModel {
     }
 
     void atualizar(Conta c) {
-        //TODO implementar
+        new Thread(() -> repository.atualizar(c)).start();
     }
 
-    void remover(Conta c) {
-        //TODO implementar
+    void remover(Conta c)  {
+        new Thread(() -> repository.remover(c)).start();
     }
 
-    void buscarPeloNumero(String numeroConta) {
-        //TODO implementar
+    void buscarPeloNumero(String numeroConta)  { //ISTO ESTÁ ERRADO!
+       // new Thread(() -> repository.buscarPeloNumero(numeroConta)).start();
     }
 }
