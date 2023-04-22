@@ -3,13 +3,17 @@ package br.ufpe.cin.residencia.banco;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import br.ufpe.cin.residencia.banco.BancoViewModel;
+import br.ufpe.cin.residencia.banco.R;
 import br.ufpe.cin.residencia.banco.conta.ContaAdapter;
 
 //Ver anotações TODO no código
@@ -32,8 +36,27 @@ public class PesquisarActivity extends AppCompatActivity {
 
         btnPesquisar.setOnClickListener(
                 v -> {
+                    RadioButton rdBtnNome = findViewById(R.id.peloNomeCliente);
+                    RadioButton rdBtnCPF = findViewById(R.id.peloCPFcliente);
+                    RadioButton rdBtnNumero = findViewById(R.id.peloNumeroConta);
+
                     String oQueFoiDigitado = aPesquisar.getText().toString();
-                    //TODO implementar a busca de acordo com o tipo de busca escolhido pelo usuário
+                    RadioButton rdBtnSelecionado = findViewById(
+                            tipoPesquisa.getCheckedRadioButtonId()
+                    );
+                    if (rdBtnSelecionado == rdBtnNome){
+                        viewModel.buscarPeloNome(oQueFoiDigitado);
+                    }
+                    if (rdBtnSelecionado == rdBtnCPF){
+                        viewModel.buscarPeloCPF(oQueFoiDigitado);
+                    }
+                    if (rdBtnSelecionado == rdBtnNumero){
+                        viewModel.buscarPeloNumero(oQueFoiDigitado);
+                    }
+
+                    viewModel.contas.observe(this, contas -> {
+                        adapter.submitList(contas);
+                    });
                 }
         );
 
