@@ -6,12 +6,14 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModelProvider;
 
 import java.util.Arrays;
 import java.util.List;
 
 import br.ufpe.cin.residencia.banco.conta.Conta;
 import br.ufpe.cin.residencia.banco.conta.ContaRepository;
+import br.ufpe.cin.residencia.banco.conta.ContaViewModel;
 
 //Ver anotações TODO no código
 public class BancoViewModel extends AndroidViewModel {
@@ -25,15 +27,29 @@ public class BancoViewModel extends AndroidViewModel {
     }
 
     void transferir(String numeroContaOrigem, String numeroContaDestino, double valor) {
-        //TODO implementar transferência entre contas (lembrar de salvar no BD os objetos Conta modificados)
+        new Thread(() -> {
+            Conta contaOrigem = repository.buscarPeloNumero(numeroContaOrigem);
+            Conta contaDestino = repository.buscarPeloNumero(numeroContaDestino);
+            contaOrigem.transferir(contaDestino, valor);
+            repository.atualizar(contaOrigem);
+            repository.atualizar(contaDestino);
+        }).start();
     }
 
     void creditar(String numeroConta, double valor) {
-        //TODO implementar creditar em conta (lembrar de salvar no BD o objeto Conta modificado)
+        new Thread(() -> {
+            Conta conta = repository.buscarPeloNumero(numeroConta);
+            conta.creditar(valor);
+            repository.atualizar(conta);
+        }).start();
     }
 
     void debitar(String numeroConta, double valor) {
-        //TODO implementar debitar em conta (lembrar de salvar no BD o objeto Conta modificado)
+        new Thread(() -> {
+            Conta conta = repository.buscarPeloNumero(numeroConta);
+            conta.debitar(valor);
+            repository.atualizar(conta);
+        }).start();
     }
 
     void buscarPeloNome(String nomeCliente) {
@@ -57,5 +73,4 @@ public class BancoViewModel extends AndroidViewModel {
             _listaAtual.postValue(listaContas);
         }).start();
     }
-
 }
