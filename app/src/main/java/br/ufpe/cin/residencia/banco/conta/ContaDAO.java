@@ -34,4 +34,6 @@ public interface ContaDAO {
 
     @Query("SELECT * FROM contas ORDER BY numero ASC")
     LiveData<List<Conta>> contas();
+    @Query("SELECT SUM(saldo) FROM contas")
+    Double saldoTotal();
 }

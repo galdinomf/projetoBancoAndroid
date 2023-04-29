@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import br.ufpe.cin.residencia.banco.cliente.ClientesActivity;
@@ -50,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
         pesquisar.setOnClickListener(
                 v -> startActivity(new Intent(this, PesquisarActivity.class))
         );
+        viewModel.getSaldoTotal().observe(this, new Observer<Double>() {
+            @Override
+            public void onChanged(Double aDouble) {
+                totalBanco.setText(String.format("%.2f", aDouble));
+            }
+        });
     }
-    //TODO Neste arquivo ainda falta a atualização automática do valor total de dinheiro armazenado no banco
 }

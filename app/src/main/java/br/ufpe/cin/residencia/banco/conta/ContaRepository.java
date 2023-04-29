@@ -34,6 +34,8 @@ public class ContaRepository {
         dao.remover(c);
     }
 
+    public Double saldoTotal(){ return dao.saldoTotal(); }
+
     @WorkerThread
     public List<Conta> buscarPeloNome(String nomeCliente) {
         return dao.buscarPeloNome(nomeCliente);

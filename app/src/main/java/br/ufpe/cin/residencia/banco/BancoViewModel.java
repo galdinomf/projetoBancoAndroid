@@ -73,4 +73,10 @@ public class BancoViewModel extends AndroidViewModel {
             _listaAtual.postValue(listaContas);
         }).start();
     }
+    public LiveData<Double> getSaldoTotal() {
+        MutableLiveData<Double> saldoTotal = new MutableLiveData<>();
+        new Thread(() -> saldoTotal.postValue(repository.saldoTotal())).start();
+        return saldoTotal;
+    }
+
 }
