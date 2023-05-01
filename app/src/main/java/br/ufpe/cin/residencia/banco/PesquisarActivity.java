@@ -59,9 +59,5 @@ public class PesquisarActivity extends AppCompatActivity {
                     });
                 }
         );
-
-        //TODO atualizar o RecyclerView com resultados da busca na medida que encontrar
-
-
     }
 }

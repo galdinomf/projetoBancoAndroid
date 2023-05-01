@@ -56,6 +56,7 @@ public class AdicionarContaActivity extends AppCompatActivity {
                     }
                     Conta c = new Conta(numeroConta, Double.valueOf(saldoConta), nomeCliente, cpfCliente);
                     viewModel.inserir(c);
+                    finish();
                 }
         );
 
