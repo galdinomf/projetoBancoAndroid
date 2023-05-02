@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //MainActivity
+    <string name="app_name">Bank</string>
+    <string name="btn_contas_label">Accounts</string>
+    <string name="btn_transferir_label">Transfer</string>
+    <string name="btn_debitar_label">Debit</string>
+    <string name="btn_creditar_label">Credit</string>
+    <string name="btn_pesquisar_label">Search</string>
+    <string name="btn_clientes_label">Clients</string>
+    <string name="txt_total_banco">Total in Bank:</string>
+
+
+</resources>

@@ -1,3 +1,13 @@
 <resources>
+    //MainActivity
     <string name="app_name">Banco</string>
+    <string name="btn_contas_label">Contas</string>
+    <string name="btn_transferir_label">Transferir</string>
+    <string name="btn_debitar_label">Debitar</string>
+    <string name="btn_creditar_label">Creditar</string>
+    <string name="btn_pesquisar_label">Pesquisar</string>
+    <string name="btn_clientes_label">Clientes</string>
+    <string name="txt_total_banco">Total no Banco:</string>
+
+
 </resources>
