@@ -27,25 +27,25 @@ public class TransferirActivity extends AppCompatActivity {
         EditText valorOperacao = findViewById(R.id.valor);
         Button btnOperacao = findViewById(R.id.btnOperacao);
 
-        valorOperacao.setHint(valorOperacao.getHint() + " transferido");
-        tipoOperacao.setText("TRANSFERIR");
-        btnOperacao.setText("Transferir");
+        valorOperacao.setHint(valorOperacao.getHint() + getString(R.string.hint_valorOperacao));
+        tipoOperacao.setText(R.string.txt_tipoOperacao);
+        btnOperacao.setText(R.string.btn_Operacao);
 
         btnOperacao.setOnClickListener(
                 v -> {
                     String numOrigem = numeroContaOrigem.getText().toString();
                     String numDestino = numeroContaDestino.getText().toString();
                     if (numOrigem.length() != 3) {
-                        Toast.makeText(this, "O número da conta de origem deve ter 3 dígitos", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, R.string.tst_verificar_numero_origem, Toast.LENGTH_SHORT).show();
                         return;
                     }
                     if (numDestino.length() != 3) {
-                        Toast.makeText(this, "O número da conta de destino deve ter 3 dígitos", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, R.string.tst_verificar_numero_destino, Toast.LENGTH_SHORT).show();
                         return;
                     }
                     String valorDigitado = valorOperacao.getText().toString();
                     if (valorDigitado.length() == 0) {
-                        Toast.makeText(this, "Campo valor não pode ficar vazio.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(this, R.string.tst_verificar_valor, Toast.LENGTH_LONG).show();
                         return;
                     }
                     double valor = Double.valueOf(valorOperacao.getText().toString());

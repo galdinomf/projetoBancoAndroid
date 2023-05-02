@@ -33,9 +33,31 @@
     <string name="edt_add_conta_cpf">Input CPF number</string>
     <string name="txt_add_conta_saldo">Balance</string>
     <string name="edt_add_conta_saldo">Input account\'s balance</string>
-    <string name="btn_add_conta_atualizar">Update</string>
+    <string name="btn_add_conta_atualizar">Insert</string>
     <string name="btn_add_conta_remover">Remove</string>
 
-    //CreditarActivity
+    //PesquisarActivity
+    <string name="edt_pesquisar_input">Input search value</string>
+    <string name="rdbtn_pesquisar_nome">Name</string>
+    <string name="rdbtn_pesquisar_cpf">CPF</string>
+    <string name="rdbtn_pesquisar_numero">Account number</string>
+    <string name="btn_pesquisar_pesquisar">Search</string>
+
+    //EditarContaActivity
+    <string name="btn_editarConta_atualizar_editar">Edit</string>
+
+    //Verificações de conta
+    <string name="tst_verificar_nome">Name must be at least 5 characters long.</string>
+    <string name="tst_verificar_cpf">CPF must be 11 digits long.</string>
+    <string name="tst_verificar_saldo">Balance field must not be empty.</string>
+    <string name="tst_verificar_numero">Account number must be 3 digits long.</string>
+
+    //TransferirActivity
+    <string name="tst_verificar_numero_origem">Origin account number must be 3 digits long.</string>
+    <string name="tst_verificar_numero_destino">Destination account number must be 3 digits long.</string>
+    <string name="tst_verificar_valor">Value field must not be empty.</string>
+    <string name="txt_tipoOperacao">TRANSFER</string>
+    <string name="btn_Operacao">Transfer</string>
+    <string name="hint_valorOperacao"> transferred</string>
 
 </resources>

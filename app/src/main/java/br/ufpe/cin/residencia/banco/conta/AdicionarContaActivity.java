@@ -29,29 +29,29 @@ public class AdicionarContaActivity extends AppCompatActivity {
         EditText campoCPF = findViewById(R.id.cpf);
         EditText campoSaldo = findViewById(R.id.saldo);
 
-        btnAtualizar.setText("Inserir");
+        btnAtualizar.setText(R.string.btn_add_conta_atualizar);
         btnRemover.setVisibility(View.GONE);
 
         btnAtualizar.setOnClickListener(
                 v -> {
                     String numeroConta = campoNumero.getText().toString();
                     if (numeroConta.length() != 3) {
-                        Toast.makeText(this, "O número da conta deve ter 3 dígitos", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, R.string.tst_verificar_numero, Toast.LENGTH_SHORT).show();
                         return;
                     }
                     String nomeCliente = campoNome.getText().toString();
                     if (nomeCliente.length() < 5) {
-                        Toast.makeText(this, "O nome deve ter pelo menos 5 caracteres", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, R.string.tst_verificar_nome, Toast.LENGTH_SHORT).show();
                         return;
                     }
                     String cpfCliente = campoCPF.getText().toString();
                     if (cpfCliente.length() != 11) {
-                        Toast.makeText(this, "O cpf deve ter 11 números", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, R.string.tst_verificar_cpf, Toast.LENGTH_SHORT).show();
                         return;
                     }
                     String saldoConta = campoSaldo.getText().toString();
                     if (saldoConta.length() == 0) {
-                        Toast.makeText(this, "Campo saldo não pode ficar vazio.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(this, R.string.tst_verificar_saldo, Toast.LENGTH_LONG).show();
                         return;
                     }
                     Conta c = new Conta(numeroConta, Double.valueOf(saldoConta), nomeCliente, cpfCliente);

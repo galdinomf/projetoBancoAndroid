@@ -35,4 +35,29 @@
     <string name="btn_add_conta_atualizar">Atualizar</string>
     <string name="btn_add_conta_remover">Remover</string>
 
+    //PesquisarActivity
+    <string name="edt_pesquisar_input">Digite algum termo para pesquisar</string>
+    <string name="rdbtn_pesquisar_nome">Nome</string>
+    <string name="rdbtn_pesquisar_cpf">CPF</string>
+    <string name="rdbtn_pesquisar_numero">Número da Conta</string>
+    <string name="btn_pesquisar_pesquisar">Pesquisar</string>
+
+    //EditarContaActivity
+    <string name="btn_editarConta_atualizar_editar">Editar</string>
+
+
+    //Verificações de conta
+    <string name="tst_verificar_nome">O nome deve ter pelo menos 5 caracteres.</string>
+    <string name="tst_verificar_cpf">O cpf deve ter 11 números.</string>
+    <string name="tst_verificar_saldo">Campo saldo não pode ficar vazio.</string>
+    <string name="tst_verificar_numero">O número da conta deve ter 3 dígitos.</string>
+
+    //TransferirActivity
+    <string name="tst_verificar_numero_origem">O número da conta de origem deve ter 3 dígitos.</string>
+    <string name="tst_verificar_numero_destino">O número da conta de destino deve ter 3 dígitos.</string>
+    <string name="tst_verificar_valor">O campo valor não pode ficar vazio.</string>
+    <string name="txt_tipoOperacao">TRANSFERIR</string>
+    <string name="btn_Operacao">Transferir</string>
+    <string name="hint_valorOperacao"> transferido</string>
+
 </resources>

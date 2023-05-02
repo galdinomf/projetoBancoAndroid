@@ -45,22 +45,22 @@ public class EditarContaActivity extends AppCompatActivity {
             }
         });
 
-        btnAtualizar.setText("Editar");
+        btnAtualizar.setText(R.string.btn_editarConta_atualizar_editar);
         btnAtualizar.setOnClickListener(
                 v -> {
                     String nomeCliente = campoNome.getText().toString();
                     if (nomeCliente.length() < 5) {
-                        Toast.makeText(this, "O nome deve ter pelo menos 5 caracteres", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, R.string.tst_verificar_nome, Toast.LENGTH_SHORT).show();
                         return;
                     }
                     String cpfCliente = campoCPF.getText().toString();
                     if (cpfCliente.length() != 11) {
-                        Toast.makeText(this, "O cpf deve ter 11 números", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, R.string.tst_verificar_cpf, Toast.LENGTH_SHORT).show();
                         return;
                     }
                     String saldoConta = campoSaldo.getText().toString();
                     if (saldoConta.length() == 0) {
-                        Toast.makeText(this, "Campo saldo não pode ficar vazio.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(this, R.string.tst_verificar_saldo, Toast.LENGTH_LONG).show();
                         return;
                     }
                     Conta c = new Conta(numeroConta, Double.valueOf(saldoConta), nomeCliente, cpfCliente);
