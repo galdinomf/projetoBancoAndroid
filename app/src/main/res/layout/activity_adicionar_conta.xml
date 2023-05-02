@@ -11,7 +11,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Número da Conta"
+            android:text="@string/txt_add_conta_numero"
             android:textSize="24sp" />
 
         <EditText
@@ -21,14 +21,14 @@
             android:layout_margin="10dp"
             android:inputType="number"
             android:fontFamily="sans-serif-light"
-            android:hint="Digite o número da conta"
+            android:hint="@string/edt_add_conta_numero"
             android:minHeight="48dp"
             android:textSize="18sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nome"
+            android:text="@string/txt_add_conta_nome"
             android:textSize="24sp" />
 
         <EditText
@@ -37,14 +37,14 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:fontFamily="sans-serif-light"
-            android:hint="Digite um nome"
+            android:hint="@string/edt_add_conta_nome"
             android:minHeight="48dp"
             android:textSize="18sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CPF"
+            android:text="@string/txt_add_conta_cpf"
             android:textSize="24sp" />
         <EditText
             android:id="@+id/cpf"
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:fontFamily="sans-serif-light"
-            android:hint="Digite um CPF"
+            android:hint="@string/edt_add_conta_cpf"
             android:inputType="number"
             android:minHeight="48dp"
             android:textSize="18sp" />
@@ -60,7 +60,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Saldo"
+            android:text="@string/txt_add_conta_saldo"
             android:textSize="24sp" />
 
         <EditText
@@ -70,7 +70,7 @@
             android:layout_margin="10dp"
             android:inputType="numberDecimal"
             android:fontFamily="sans-serif-light"
-            android:hint="Digite o saldo"
+            android:hint="@string/edt_add_conta_saldo"
             android:minHeight="48dp"
             android:textSize="18sp" />
 
@@ -79,7 +79,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="Atualizar"
+            android:text="@string/btn_add_conta_atualizar"
             android:textColor="#FFFFFF" />
 
         <Button
@@ -87,7 +87,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="Remover"
+            android:text="@string/btn_add_conta_remover"
             android:textColor="#FFFFFF" />
 
     </LinearLayout>

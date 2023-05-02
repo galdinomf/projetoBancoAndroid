@@ -9,5 +9,30 @@
     <string name="btn_clientes_label">Clientes</string>
     <string name="txt_total_banco">Total no Banco:</string>
 
+    //ClientesActivity
+    <string name="btn_add_clientes_label">Adicionar Cliente</string>
+
+    //AdicionarClienteActivity
+    <string name="txt_add_cliente_nome">Nome</string>
+    <string name="edt_add_cliente_nome">Digite um nome</string>
+    <string name="txt_add_cliente_cpf">CPF</string>
+    <string name="edt_add_cliente_cpf">Digite um CPF</string>
+    <string name="btn_add_cliente_atualizar">Atualizar</string>
+    <string name="btn_add_cliente_remover">Remover</string>
+
+    //ContasActivity
+    <string name="btn_contas_add_conta">Adicionar Conta</string>
+
+    //AdicionarContaActivity
+    <string name="txt_add_conta_numero">Número da Conta</string>
+    <string name="edt_add_conta_numero">Digite o número da conta</string>
+    <string name="txt_add_conta_nome">Nome</string>
+    <string name="edt_add_conta_nome">Digite um nome</string>
+    <string name="txt_add_conta_cpf">CPF</string>
+    <string name="edt_add_conta_cpf">Digite um CPF</string>
+    <string name="txt_add_conta_saldo">Saldo</string>
+    <string name="edt_add_conta_saldo">Digite o saldo</string>
+    <string name="btn_add_conta_atualizar">Atualizar</string>
+    <string name="btn_add_conta_remover">Remover</string>
 
 </resources>
