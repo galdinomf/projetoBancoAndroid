@@ -16,7 +16,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Número da Conta Origem"
+        android:text="@string/txt_numeroContaOrigem"
         android:textSize="24sp" />
 
     <EditText
@@ -26,7 +26,7 @@
         android:layout_margin="10dp"
         android:inputType="number"
         android:fontFamily="sans-serif-light"
-        android:hint="Digite o número da conta"
+        android:hint="@string/edt_numeroContaOrigem"
         android:minHeight="48dp"
         android:textSize="18sp" />
 
@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/labelContaDestino"
-        android:text="Número da Conta Destino"
+        android:text="@string/txt_numeroContaDestino"
         android:textSize="24sp" />
 
     <EditText
@@ -44,14 +44,14 @@
         android:layout_margin="10dp"
         android:inputType="number"
         android:fontFamily="sans-serif-light"
-        android:hint="Digite o número da conta"
+        android:hint="@string/edt_numeroContaDestino"
         android:minHeight="48dp"
         android:textSize="18sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Valor"
+        android:text="@string/txt_valor"
         android:textSize="24sp" />
 
     <EditText
@@ -61,7 +61,7 @@
         android:layout_margin="10dp"
         android:inputType="numberDecimal"
         android:fontFamily="sans-serif-light"
-        android:hint="Digite o valor a ser "
+        android:hint="@string/edt_valor"
         android:minHeight="48dp"
         android:textSize="18sp" />
 

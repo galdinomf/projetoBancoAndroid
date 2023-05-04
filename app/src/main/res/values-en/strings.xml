@@ -60,4 +60,12 @@
     <string name="btn_Operacao">Transfer</string>
     <string name="hint_valorOperacao"> transferred</string>
 
+    //activity_operacoes.xml
+    <string name="txt_numeroContaOrigem">Origin account number</string>
+    <string name="edt_numeroContaOrigem">Input account number</string>
+    <string name="txt_numeroContaDestino">Destination account number</string>
+    <string name="edt_numeroContaDestino">Input account number</string>
+    <string name="txt_valor">Amount</string>
+    <string name="edt_valor">Input amount to be</string>
+
 </resources>
