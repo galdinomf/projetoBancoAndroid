@@ -28,7 +28,9 @@ public class ContaViewHolder  extends RecyclerView.ViewHolder {
 
     void bindTo(Conta c) {
         this.nomeCliente.setText(c.nomeCliente);
-        this.infoConta.setText(c.numero + " | " + "Saldo atual: " + NumberFormat.getCurrencyInstance().format(c.saldo));
+        Context cnt = this.itemView.getContext();
+        this.infoConta.setText(c.numero + " | " + cnt.getString(R.string.txt_infoConta_saldoAtual) +
+                               " " + NumberFormat.getCurrencyInstance().format(c.saldo));
 
         if (c.saldo < 0)
             this.icone.setImageResource(R.drawable.delete);

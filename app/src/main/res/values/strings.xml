@@ -78,4 +78,7 @@
     <string name="btn_Operacao_creditar">Creditar</string>
     <string name="hint_valorOperacao_creditar">creditado</string>
 
+    //ContaViewHolder
+    <string name="txt_infoConta_saldoAtual">Saldo atual: </string>
+
 </resources>

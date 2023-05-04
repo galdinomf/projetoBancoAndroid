@@ -78,4 +78,7 @@
     <string name="btn_Operacao_creditar">Credit</string>
     <string name="hint_valorOperacao_creditar">credited</string>
 
+    //ContaViewHolder
+    <string name="txt_infoConta_saldoAtual">Current balance: </string>
+
 </resources>
