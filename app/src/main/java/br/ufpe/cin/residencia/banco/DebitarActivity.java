@@ -29,20 +29,20 @@ public class DebitarActivity extends AppCompatActivity {
         labelContaDestino.setVisibility(View.GONE);
         numeroContaDestino.setVisibility(View.GONE);
 
-        valorOperacao.setHint(valorOperacao.getHint() + " debitado");
-        tipoOperacao.setText("DEBITAR");
-        btnOperacao.setText("Debitar");
+        valorOperacao.setHint(valorOperacao.getHint() + " " + getString(R.string.hint_valorOperacao_debitar));
+        tipoOperacao.setText(R.string.txt_tipoOperacao_debitar);
+        btnOperacao.setText(R.string.btn_Operacao_debitar);
 
         btnOperacao.setOnClickListener(
                 v -> {
                     String numOrigem = numeroContaOrigem.getText().toString();
                     if (numOrigem.length() != 3) {
-                        Toast.makeText(this, "O número da conta deve ter 3 dígitos", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, R.string.tst_verificar_numero, Toast.LENGTH_SHORT).show();
                         return;
                     }
                     String valorDigitado = valorOperacao.getText().toString();
                     if (valorDigitado.length() == 0) {
-                        Toast.makeText(this, "Campo valor não pode ficar vazio.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(this, R.string.tst_verificar_valor, Toast.LENGTH_LONG).show();
                         return;
                     }
                     double valor = Double.valueOf(valorOperacao.getText().toString());

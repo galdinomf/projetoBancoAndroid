@@ -67,4 +67,15 @@
     <string name="edt_numeroContaDestino">Digite o número da conta</string>
     <string name="txt_valor">Valor</string>
     <string name="edt_valor">Digite o valor a ser</string>
+
+    //DebitarActivity
+    <string name="txt_tipoOperacao_debitar">DEBITAR</string>
+    <string name="btn_Operacao_debitar">Debitar</string>
+    <string name="hint_valorOperacao_debitar"> debitado</string>
+
+    //CreditarActivity
+    <string name="txt_tipoOperacao_creditar">CREDITAR</string>
+    <string name="btn_Operacao_creditar">Creditar</string>
+    <string name="hint_valorOperacao_creditar">creditado</string>
+
 </resources>

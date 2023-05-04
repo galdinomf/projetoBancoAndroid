@@ -68,4 +68,14 @@
     <string name="txt_valor">Amount</string>
     <string name="edt_valor">Input amount to be</string>
 
+    //DebitarActivity
+    <string name="txt_tipoOperacao_debitar">DEBIT</string>
+    <string name="btn_Operacao_debitar">Debit</string>
+    <string name="hint_valorOperacao_debitar">debited</string>
+
+    //CreditarActivity
+    <string name="txt_tipoOperacao_creditar">CREDIT</string>
+    <string name="btn_Operacao_creditar">Credit</string>
+    <string name="hint_valorOperacao_creditar">credited</string>
+
 </resources>

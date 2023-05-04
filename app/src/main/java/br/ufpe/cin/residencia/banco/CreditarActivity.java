@@ -27,20 +27,20 @@ public class CreditarActivity extends AppCompatActivity {
         Button btnOperacao = findViewById(R.id.btnOperacao);
         labelContaDestino.setVisibility(View.GONE);
         numeroContaDestino.setVisibility(View.GONE);
-        valorOperacao.setHint(valorOperacao.getHint() + " creditado");
-        tipoOperacao.setText("CREDITAR");
-        btnOperacao.setText("Creditar");
+        valorOperacao.setHint(valorOperacao.getHint() + " " + getString(R.string.hint_valorOperacao_creditar));
+        tipoOperacao.setText(R.string.txt_tipoOperacao_creditar);
+        btnOperacao.setText(R.string.btn_Operacao_creditar);
 
         btnOperacao.setOnClickListener(
                 v -> {
                     String numOrigem = numeroContaOrigem.getText().toString();
                     if (numOrigem.length() != 3) {
-                        Toast.makeText(this, "O número da conta deve ter 3 dígitos", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, R.string.tst_verificar_numero, Toast.LENGTH_SHORT).show();
                         return;
                     }
                     String valorDigitado = valorOperacao.getText().toString();
                     if (valorDigitado.length() == 0) {
-                        Toast.makeText(this, "Campo valor não pode ficar vazio.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(this, R.string.tst_verificar_valor, Toast.LENGTH_LONG).show();
                         return;
                     }
                     double valor = Double.valueOf(valorOperacao.getText().toString());
