@@ -34,6 +34,7 @@
     <string name="edt_add_conta_saldo">Digite o saldo</string>
     <string name="btn_add_conta_atualizar">Atualizar</string>
     <string name="btn_add_conta_remover">Remover</string>
+    <string name="tst_contaJaExistente">Número de conta já existente.</string>
 
     //PesquisarActivity
     <string name="edt_pesquisar_input">Digite algum termo para pesquisar</string>

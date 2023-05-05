@@ -55,7 +55,7 @@ public class AdicionarContaActivity extends AppCompatActivity {
 //                        }
 //                    });
                     if (viewModel.contaAtual.getValue() != null) {
-                        Toast.makeText(this, "Número de conta já existente.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, R.string.tst_contaJaExistente, Toast.LENGTH_SHORT).show();
                         return;
                     }
                     String nomeCliente = campoNome.getText().toString();

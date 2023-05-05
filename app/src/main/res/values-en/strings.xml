@@ -35,6 +35,7 @@
     <string name="edt_add_conta_saldo">Input account\'s balance</string>
     <string name="btn_add_conta_atualizar">Insert</string>
     <string name="btn_add_conta_remover">Remove</string>
+    <string name="tst_contaJaExistente">Account number already registered.</string>
 
     //PesquisarActivity
     <string name="edt_pesquisar_input">Input search value</string>
