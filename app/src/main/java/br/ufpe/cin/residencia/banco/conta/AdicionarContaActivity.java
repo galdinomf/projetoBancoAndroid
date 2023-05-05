@@ -32,11 +32,30 @@ public class AdicionarContaActivity extends AppCompatActivity {
         btnAtualizar.setText(R.string.btn_add_conta_atualizar);
         btnRemover.setVisibility(View.GONE);
 
+        campoNumero.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (!hasFocus) {
+                    viewModel.buscarPeloNumero(campoNumero.getText().toString());
+                }
+            }
+        });
+
         btnAtualizar.setOnClickListener(
                 v -> {
                     String numeroConta = campoNumero.getText().toString();
                     if (numeroConta.length() != 3) {
                         Toast.makeText(this, R.string.tst_verificar_numero, Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+//                    viewModel.contaAtual.observe(this, conta -> {
+//                        if (conta != null){
+//                            Toast.makeText(this, "Conta já existente.", Toast.LENGTH_SHORT).show();
+//                            return;
+//                        }
+//                    });
+                    if (viewModel.contaAtual.getValue() != null) {
+                        Toast.makeText(this, "Número de conta já existente.", Toast.LENGTH_SHORT).show();
                         return;
                     }
                     String nomeCliente = campoNome.getText().toString();
