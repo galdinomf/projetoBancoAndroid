@@ -37,16 +37,20 @@ public class TransferirActivity extends AppCompatActivity {
         btnOperacao.setText(R.string.btn_Operacao);
 
         viewModel.contas.observe(this, contas -> {
+            boolean achouContaOrigem = false;
+            boolean achouContaDestino = false;
             if (contas.get(0) == null)
                 return ;
             for (Conta conta: contas){
                 if (conta.numero.equals(numeroContaOrigem.getText().toString())){
-                    contaOrigemExite = true;
+                    achouContaOrigem = true;
                 }
                 if (conta.numero.equals(numeroContaDestino.getText().toString())){
-                    contaDestinoExite = true;
+                    achouContaDestino = true;
                 }
             }
+            contaOrigemExite = achouContaOrigem;
+            contaDestinoExite = achouContaDestino;
         });
 
         numeroContaOrigem.setOnFocusChangeListener(new View.OnFocusChangeListener() {

@@ -37,11 +37,14 @@ public class DebitarActivity extends AppCompatActivity {
         btnOperacao.setText(R.string.btn_Operacao_debitar);
 
         viewModel.contas.observe(this, contas -> {
-            if (contas.get(0) == null)
+            if (contas.get(0) == null){
+                contaExiste = false;
                 return ;
+            }
             for (Conta conta : contas){
                 if (conta.numero.equals(numeroContaOrigem.getText().toString())){
                     contaExiste = true;
+                    return ;
                 }
             }
         });
