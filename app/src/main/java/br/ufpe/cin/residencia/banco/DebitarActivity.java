@@ -10,9 +10,12 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
+import br.ufpe.cin.residencia.banco.conta.Conta;
+
 //Ver anotações TODO no código
 public class DebitarActivity extends AppCompatActivity {
     BancoViewModel viewModel;
+     boolean contaExiste = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,11 +36,35 @@ public class DebitarActivity extends AppCompatActivity {
         tipoOperacao.setText(R.string.txt_tipoOperacao_debitar);
         btnOperacao.setText(R.string.btn_Operacao_debitar);
 
+        viewModel.contas.observe(this, contas -> {
+            if (contas.get(0) == null)
+                return ;
+            for (Conta conta : contas){
+                if (conta.numero.equals(numeroContaOrigem.getText().toString())){
+                    contaExiste = true;
+                }
+            }
+        });
+
+
+        numeroContaOrigem.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (!hasFocus) {
+                    viewModel.buscarPeloNumero(numeroContaOrigem.getText().toString());
+                }
+            }
+        });
+
         btnOperacao.setOnClickListener(
                 v -> {
                     String numOrigem = numeroContaOrigem.getText().toString();
                     if (numOrigem.length() != 3) {
                         Toast.makeText(this, R.string.tst_verificar_numero, Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    if (!contaExiste) {
+                        Toast.makeText(this, "conta errada", Toast.LENGTH_SHORT).show();
                         return;
                     }
                     String valorDigitado = valorOperacao.getText().toString();
