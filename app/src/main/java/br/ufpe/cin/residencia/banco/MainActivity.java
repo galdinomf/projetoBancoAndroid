@@ -51,11 +51,17 @@ public class MainActivity extends AppCompatActivity {
         pesquisar.setOnClickListener(
                 v -> startActivity(new Intent(this, PesquisarActivity.class))
         );
-        viewModel.getSaldoTotal().observe(this, new Observer<Double>() {
+        viewModel.saldoTotal.observe(this, new Observer<Double>() {
             @Override
             public void onChanged(Double aDouble) {
                 totalBanco.setText(String.format("%.2f", aDouble));
             }
         });
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        viewModel.getSaldoTotal();
     }
 }

@@ -20,6 +20,7 @@ public class BancoViewModel extends AndroidViewModel {
     private ContaRepository repository;
     private MutableLiveData<List<Conta>> _listaAtual = new MutableLiveData<>();
     public LiveData<List<Conta>> contas = _listaAtual;
+    public MutableLiveData<Double> saldoTotal = new MutableLiveData<>();
 
     public BancoViewModel(@NonNull Application application) {
         super(application);
@@ -73,10 +74,8 @@ public class BancoViewModel extends AndroidViewModel {
             _listaAtual.postValue(listaContas);
         }).start();
     }
-    public LiveData<Double> getSaldoTotal() {
-        MutableLiveData<Double> saldoTotal = new MutableLiveData<>();
+    public void getSaldoTotal() {
         new Thread(() -> saldoTotal.postValue(repository.saldoTotal())).start();
-        return saldoTotal;
     }
 
 }
