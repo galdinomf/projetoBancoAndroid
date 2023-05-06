@@ -67,7 +67,7 @@ public class DebitarActivity extends AppCompatActivity {
                         return;
                     }
                     if (!contaExiste) {
-                        Toast.makeText(this, "conta errada", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, R.string.tst_conta_nao_existe, Toast.LENGTH_SHORT).show();
                         return;
                     }
                     String valorDigitado = valorOperacao.getText().toString();

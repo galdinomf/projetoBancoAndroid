@@ -52,10 +52,13 @@
     <string name="tst_verificar_cpf">O cpf deve ter 11 números.</string>
     <string name="tst_verificar_saldo">Campo saldo não pode ficar vazio.</string>
     <string name="tst_verificar_numero">O número da conta deve ter 3 dígitos.</string>
+    <string name="tst_conta_nao_existe">Não existe conta com o número inserido.</string>
 
     //TransferirActivity
     <string name="tst_verificar_numero_origem">O número da conta de origem deve ter 3 dígitos.</string>
     <string name="tst_verificar_numero_destino">O número da conta de destino deve ter 3 dígitos.</string>
+    <string name="tst_conta_origem_errada">Conta de origem não existe.</string>
+    <string name="tst_conta_destino_errada">Conta de destino não existe.</string>
     <string name="tst_verificar_valor">O campo valor não pode ficar vazio.</string>
     <string name="txt_tipoOperacao">TRANSFERIR</string>
     <string name="btn_Operacao">Transferir</string>

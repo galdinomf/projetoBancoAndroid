@@ -52,10 +52,13 @@
     <string name="tst_verificar_cpf">CPF must be 11 digits long.</string>
     <string name="tst_verificar_saldo">Balance field must not be empty.</string>
     <string name="tst_verificar_numero">Account number must be 3 digits long.</string>
+    <string name="tst_conta_nao_existe">No account with provided number.</string>
 
     //TransferirActivity
     <string name="tst_verificar_numero_origem">Origin account number must be 3 digits long.</string>
     <string name="tst_verificar_numero_destino">Destination account number must be 3 digits long.</string>
+    <string name="tst_conta_origem_errada">Origin account doesn\'t exist.</string>
+    <string name="tst_conta_destino_errada">Destination account doesn\'t exist.</string>
     <string name="tst_verificar_valor">Value field must not be empty.</string>
     <string name="txt_tipoOperacao">TRANSFER</string>
     <string name="btn_Operacao">Transfer</string>

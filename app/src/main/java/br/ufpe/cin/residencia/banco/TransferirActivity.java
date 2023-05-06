@@ -80,7 +80,7 @@ public class TransferirActivity extends AppCompatActivity {
                         return;
                     }
                     if (!contaOrigemExite) {
-                        Toast.makeText(this, "conta de origem errada", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, R.string.tst_conta_origem_errada, Toast.LENGTH_SHORT).show();
                         return;
                     }
                     if (numDestino.length() != 3) {
@@ -88,7 +88,7 @@ public class TransferirActivity extends AppCompatActivity {
                         return;
                     }
                     if (!contaDestinoExite) {
-                        Toast.makeText(this, "conta de destino errada", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, R.string.tst_conta_destino_errada, Toast.LENGTH_SHORT).show();
                         return;
                     }
                     String valorDigitado = valorOperacao.getText().toString();
