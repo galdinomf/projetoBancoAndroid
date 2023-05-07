@@ -18,7 +18,7 @@
     <string name="edt_add_cliente_nome">Input a name</string>
     <string name="txt_add_cliente_cpf">CPF</string>
     <string name="edt_add_cliente_cpf">Input CPF number</string>
-    <string name="btn_add_cliente_atualizar">Update</string>
+    <string name="btn_add_cliente_atualizar">Add</string>
     <string name="btn_add_cliente_remover">Remove</string>
 
     //ContasActivity

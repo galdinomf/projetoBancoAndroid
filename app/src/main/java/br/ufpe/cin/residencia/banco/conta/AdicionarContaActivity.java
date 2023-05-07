@@ -48,12 +48,6 @@ public class AdicionarContaActivity extends AppCompatActivity {
                         Toast.makeText(this, R.string.tst_verificar_numero, Toast.LENGTH_SHORT).show();
                         return;
                     }
-//                    viewModel.contaAtual.observe(this, conta -> {
-//                        if (conta != null){
-//                            Toast.makeText(this, "Conta já existente.", Toast.LENGTH_SHORT).show();
-//                            return;
-//                        }
-//                    });
                     if (viewModel.contaAtual.getValue() != null) {
                         Toast.makeText(this, R.string.tst_contaJaExistente, Toast.LENGTH_SHORT).show();
                         return;
