@@ -63,6 +63,7 @@
     <string name="txt_tipoOperacao">TRANSFERIR</string>
     <string name="btn_Operacao">Transferir</string>
     <string name="hint_valorOperacao"> transferido</string>
+    <string name="tst_saldo_insuficiente">Saldo insuficiente para transferir.</string>
 
     //activity_operacoes.xml
     <string name="txt_numeroContaOrigem">Número da Conta Origem</string>

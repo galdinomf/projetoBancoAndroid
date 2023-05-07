@@ -63,6 +63,7 @@
     <string name="txt_tipoOperacao">TRANSFER</string>
     <string name="btn_Operacao">Transfer</string>
     <string name="hint_valorOperacao"> transferred</string>
+    <string name="tst_saldo_insuficiente">Insufficient funds to transfer.</string>
 
     //activity_operacoes.xml
     <string name="txt_numeroContaOrigem">Origin account number</string>

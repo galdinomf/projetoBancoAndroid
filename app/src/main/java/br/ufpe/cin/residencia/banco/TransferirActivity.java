@@ -18,6 +18,7 @@ public class TransferirActivity extends AppCompatActivity {
     BancoViewModel viewModel;
     boolean contaOrigemExite = false;
     boolean contaDestinoExite = false;
+    Double saldoContaOrigem = 0.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +44,7 @@ public class TransferirActivity extends AppCompatActivity {
                 if (conta.numero.equals(numeroContaOrigem.getText().toString())){
                     numeroContaOrigem.setEnabled(false);
                     contaOrigemExite = true;
+                    saldoContaOrigem = conta.saldo;
                 }
                 if (conta.numero.equals(numeroContaDestino.getText().toString())){
                     numeroContaDestino.setEnabled(false);
@@ -95,6 +97,11 @@ public class TransferirActivity extends AppCompatActivity {
                         return;
                     }
                     double valor = Double.valueOf(valorOperacao.getText().toString());
+                    if (saldoContaOrigem < valor) {
+                        Toast.makeText(this, R.string.tst_saldo_insuficiente, Toast.LENGTH_LONG).show();
+                        finish();
+                        return ;
+                    }
                     viewModel.transferir(numOrigem, numDestino, valor);
                     finish();
                 }
